@@ -1,4 +1,5 @@
-import {app} from './app.js'
+import {pkg} from './app.js'
+const {app} = pkg
 import {connectDb} from "./database/connectDb.js";
 // create database here 
 connectDb()
