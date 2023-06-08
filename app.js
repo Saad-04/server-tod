@@ -25,5 +25,5 @@ app.get('/', (req, res) => {
 })
 app.use(errorMiddleware)
 
-export {app}
+export default app
 
