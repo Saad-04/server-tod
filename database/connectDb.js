@@ -1,11 +1,11 @@
+
 import mongoose from "mongoose";
 
- const connectDb =()=>{mongoose.connect(process.env.DATABASE_URL,
- { dbName: "backend-api",
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-})
-.then((r) => console.log(`Database Connected to ${r.connection.host}`))
-.catch((e) => console.log(e))}
-
-export default connectDb
+export const connectDB = () => {
+  mongoose
+    .connect(process.env.DATABASE_URL, {
+      dbName: "backend-api",
+    })
+    .then((c) => console.log(`Database Connected with ${c.connection.host}`))
+    .catch((e) => console.log(e));
+};
