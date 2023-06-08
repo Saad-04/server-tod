@@ -5,7 +5,7 @@ import {config} from 'dotenv'
 import cookieParser from "cookie-parser";
 import { routerTask } from "./routes/task.js";
 import { errorMiddleware } from "./middlewares/errorMiddleware.js";
-export const app = express();
+const app = express();
 config({
     "path":"./database/config.env"
 })
@@ -25,5 +25,5 @@ app.get('/', (req, res) => {
 })
 app.use(errorMiddleware)
 
-
+export {app}
 
