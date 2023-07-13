@@ -49,7 +49,7 @@ export const logout= async (req,res,next)=>{
  secure:process.env.NODE_URL ==="DEVELOPMENT"?true:false,
             })} 
     catch (error) {
-        next(error)
+        next(error);
     }}
           
             
